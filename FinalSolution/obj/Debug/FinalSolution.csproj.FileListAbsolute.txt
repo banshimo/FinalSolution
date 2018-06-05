@@ -1,0 +1,5 @@
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\FinalSolution.exe.config
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\FinalSolution.exe
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\FinalSolution.pdb
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\obj\Debug\FinalSolution.exe
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\obj\Debug\FinalSolution.pdb
