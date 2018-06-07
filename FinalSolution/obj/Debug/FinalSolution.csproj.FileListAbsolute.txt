@@ -3,3 +3,13 @@ C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSoluti
 C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\FinalSolution.pdb
 C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\obj\Debug\FinalSolution.exe
 C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\obj\Debug\FinalSolution.pdb
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Twilio.dll
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\bin\Debug\Twilio.xml
+C:\Users\dor.ben\Documents\Visual Studio 2015\Projects\FinalSolution\FinalSolution\obj\Debug\FinalSolution.csprojResolveAssemblyReference.cache
