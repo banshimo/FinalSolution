@@ -101,6 +101,7 @@ namespace FinalSolution
             {
                 smtp.Send(message);
             }
+            File.Delete(outputFilePath);
         }
     }
 }
